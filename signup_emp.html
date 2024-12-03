@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Sign Up</title>
+</head>
+<body>
+<form method="POST" action="signup_emp.php">
+    <table>
+        <tr>
+            <td>First Name:</td>
+            <td><input type="text" name="f_name"></td>
+        </tr>
+        <tr>
+           <td>Last Name:</td>
+           <td><input type="text" name="l_name"></td>
+        </tr>
+        <tr>
+           <td>Phone Number:</td>
+           <td><input type="tel" name="telephone"></td>
+        </tr>
+        <tr>
+           <td>Username:</td>
+           <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>Post:</td>
+            <td><input type="radio" name="position" value="CASHIER">Cashier</td>
+            <td><input type="radio" name="position" value="INVENCONT">Inventory Control</td>
+            <td><input type="radio" name="position" value="MANAGER">Manager</td>
+        </tr>
+        <tr>
+           <td>Password:</td>
+           <td><input type="password" name="password" id="pwd"></td>
+        </tr>
+        <tr>
+           <td>Show Password:</td>
+           <td><input type="checkbox" onclick="showpwd()"></td>
+        </tr>
+    </table>
+    <p>Tip: Please ensure that the password you have entered is correct by clicking 'Show Password'.</p>
+    <input type="submit" value="Submit">
+    <p>Already a member? Click <a href="login.html">here</a> to login.</p>
+    <p>Want to register your shop? Click <a href="signup_owner.html">here</a>.</p>
+    <script type="text/JavaScript">
+        function showpwd(){
+            var check=document.getElementById("pwd");
+            if (check.type=="password"){
+                check.type="text";
+            }
+            else{
+                check.type="password";
+            }
+        }
+    </script>
+</form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+<form method="POST" action="login.php">
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password" id="pwd"></td>
+        </tr>
+        <tr>
+            <td>Owner or Employee:</td>
+            <td><input type="radio" name="position" value="Owner">Owner</td>
+            <td><input type="radio" name="position" value="Employee">Employee</td>
+        </tr>
+        <tr>
+           <td>Show Password:</td>
+           <td><input type="checkbox" onclick="showpwd()"></td>
+        </tr>
+    </table>
+    <p>Tip: Please ensure that the password you have entered is correct by clicking 'Show Password'.</p>
+    <input type="submit" value="Submit">
+    <p>Already a member? Click <a href="landing_page.html">here</a> to login.</p>
+    <script type="text/JavaScript">
+        function showpwd(){
+            var check=document.getElementById("pwd");
+            if (check.type=="password"){
+                check.type="text";
+            }
+            else{
+                check.type="password";
+            }
+        }
+    </script>
+</form>
+</body>
+</html>
